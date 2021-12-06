@@ -14,12 +14,20 @@ class Todo extends Model
     use HasFactory;
     protected $fillable = [
         'todo',
-        'tag_id'
+        'description',
+        'user_id'
         ];
+
 
     public function tag()
     {
         return $this->belongsTo(Tag::class);
+
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
 
     }
 }

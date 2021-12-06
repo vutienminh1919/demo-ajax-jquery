@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Tag;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TodoFactory extends Factory
@@ -15,8 +16,10 @@ class TodoFactory extends Factory
     public function definition()
     {
         return [
-            'todo'=>$this->faker->text,
-            'tag_id' => Tag::all()->random()->id
+            'todo'=>$this->faker->name,
+            'description'=>$this->faker->text,
+
+            'user_id' => User::all()->random()->id
         ];
     }
 }

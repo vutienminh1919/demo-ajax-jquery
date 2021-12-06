@@ -7,6 +7,7 @@ use App\Models\Tag;
 use App\Models\Todo;
 
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Response;
@@ -19,21 +20,23 @@ class TodoController extends Controller
         $todos = Todo::orderBy('id','desc')->paginate(5);
 //        $todos = DB::table('todos')->orderBy('id','desc')->paginate(5);
         $tags = Tag::all();
-        return view('backend.note', compact('todos','tags'));
+        $users = User::all();
+        return view('backend.note', compact('todos','tags','users'));
+
     }
 
     public function store(Request $request)
     {
-
+        $request->validate([
+            'todo' => 'required'
+        ]);
 
         $todo = new Todo();
         $todo->todo = $request->todo;
         $todo->tag_id = $request->input('tag');
         $todo->save();
-//        $todo = Todo::create([
-//            'todo' => $request->todo
-//        ]);
-        return response()->json($todo);
+//        toastr()->success("Create Success !");
+        return response()->json([$todo,'message'=> 'Create success']);
     }
 
     public function update(Todo $todo, Request $request)
@@ -45,12 +48,19 @@ class TodoController extends Controller
         $todo->todo = $request->todo;
         $todo->tag_id = $request->input('tag');
         $todo->save();
-        return response()->json($todo);
+//        toastr()->success("Edit Success !");
+        return response()->json([$todo,'message'=> 'Edit success'],200);
+    }
+
+    public function show(Todo $todo)
+    {
+
     }
 
     public function destroy(Todo $todo)
     {
         $todo->delete();
-        return response()->json($todo);
+//        toastr()->success("Delete Success !");
+        return response()->json($todo,200);
     }
 }
