@@ -24,23 +24,23 @@
           content="flat ui, admin Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
     <meta name="author" content="colorlib"/>
     <!-- Favicon icon -->
-    <link rel="icon" href="files/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{asset('files/assets/images/favicon.ico')}}" type="image/x-icon">
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700" rel="stylesheet">
     <!-- Required Fremwork -->
-    <link rel="stylesheet" type="text/css" href="files/bower_components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/bower_components/bootstrap/css/bootstrap.min.css')}}">
     <!-- waves.css -->
-    <link rel="stylesheet" href="files/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="{{asset('files/assets/pages/waves/css/waves.min.css')}}" type="text/css" media="all">
     <!-- feather icon -->
-    <link rel="stylesheet" type="text/css" href="files/assets/icon/feather/css/feather.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/assets/icon/feather/css/feather.css')}}">
     <!-- font-awesome-n -->
-    <link rel="stylesheet" type="text/css" href="files/assets/css/font-awesome-n.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/assets/css/font-awesome-n.min.css')}}">
     <!-- Chartlist chart css -->
-    <link rel="stylesheet" href="files/bower_components/chartist/css/chartist.css" type="text/css" media="all">
+    <link rel="stylesheet" href="{{asset('files/bower_components/chartist/css/chartist.css')}}" type="text/css" media="all">
     <!-- Style.css -->
-    <link rel="stylesheet" type="text/css" href="files/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="files/assets/css/widget.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/assets/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('files/assets/css/widget.css')}}">
 </head>
 
 <body>
@@ -57,7 +57,7 @@
             <div class="navbar-wrapper">
                 <div class="navbar-logo">
                     <a href="index-2.html">
-                        <img class="img-fluid" src="files/assets/images/logo.png" alt="Theme-Logo"/>
+                        <img class="img-fluid" src="{{asset('files/assets/images/logo.png')}}" alt="Theme-Logo"/>
                     </a>
                     <a class="mobile-menu" id="mobile-collapse" href="#!">
                         <i class="feather icon-menu icon-toggle-right"></i>
@@ -74,7 +74,7 @@
                                         <span class="input-group-prepend search-close">
 										<i class="feather icon-x input-group-text"></i>
 									</span>
-                                    <input type="text" class="form-control" placeholder="Enter Keyword">
+                                    <input type="text" class="form-control" name="keyword" id="keyword" placeholder="Enter Keyword">
                                     <span class="input-group-append search-btn">
 										<i class="feather icon-search input-group-text"></i>
 									</span>
@@ -102,7 +102,7 @@
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img class="img-radius" src="files/assets/images/avatar-4.jpg"
+                                            <img class="img-radius" src="{{asset('files/assets/images/avatar-4.jpg')}}"
                                                  alt="Generic placeholder image">
                                             <div class="media-body">
                                                 <h5 class="notification-user">John Doe</h5>
@@ -114,7 +114,7 @@
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img class="img-radius" src="files/assets/images/avatar-3.jpg"
+                                            <img class="img-radius" src="{{asset('files/assets/images/avatar-3.jpg')}}"
                                                  alt="Generic placeholder image">
                                             <div class="media-body">
                                                 <h5 class="notification-user">Joseph William</h5>
@@ -126,7 +126,7 @@
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img class="img-radius" src="files/assets/images/avatar-4.jpg"
+                                            <img class="img-radius" src="{{asset('files/assets/images/avatar-4.jpg')}}"
                                                  alt="Generic placeholder image">
                                             <div class="media-body">
                                                 <h5 class="notification-user">Sara Soudein</h5>
@@ -180,7 +180,7 @@
                         <div class="media userlist-box waves-effect waves-light" data-id="1" data-status="online"
                              data-username="Josephin Doe">
                             <a class="media-left" href="#!">
-                                <img class="media-object img-radius img-radius" src="files/assets/images/avatar-3.jpg"
+                                <img class="media-object img-radius img-radius" src="{{asset('files/assets/images/avatar-3.jpg')}}"
                                      alt="Generic placeholder image ">
                                 <div class="live-status bg-success"></div>
                             </a>
@@ -191,7 +191,7 @@
                         <div class="media userlist-box waves-effect waves-light" data-id="2" data-status="online"
                              data-username="Lary Doe">
                             <a class="media-left" href="#!">
-                                <img class="media-object img-radius" src="files/assets/images/avatar-2.jpg"
+                                <img class="media-object img-radius" src="{{asset('files/assets/images/avatar-2.jp')}}g"
                                      alt="Generic placeholder image">
                                 <div class="live-status bg-success"></div>
                             </a>
@@ -202,7 +202,7 @@
                         <div class="media userlist-box waves-effect waves-light" data-id="3" data-status="online"
                              data-username="Alice">
                             <a class="media-left" href="#!">
-                                <img class="media-object img-radius" src="files/assets/images/avatar-4.jpg"
+                                <img class="media-object img-radius" src="{{asset('files/assets/images/avatar-4.jpg')}}"
                                      alt="Generic placeholder image">
                                 <div class="live-status bg-success"></div>
                             </a>
@@ -213,7 +213,7 @@
                         <div class="media userlist-box waves-effect waves-light" data-id="4" data-status="offline"
                              data-username="Alia">
                             <a class="media-left" href="#!">
-                                <img class="media-object img-radius" src="files/assets/images/avatar-3.jpg"
+                                <img class="media-object img-radius" src="{{asset('files/assets/images/avatar-3.jpg')}}"
                                      alt="Generic placeholder image">
                                 <div class="live-status bg-default"></div>
                             </a>
@@ -225,7 +225,7 @@
                         <div class="media userlist-box waves-effect waves-light" data-id="5" data-status="offline"
                              data-username="Suzen">
                             <a class="media-left" href="#!">
-                                <img class="media-object img-radius" src="files/assets/images/avatar-2.jpg"
+                                <img class="media-object img-radius" src="{{asset('files/assets/images/avatar-2.jpg')}}"
                                      alt="Generic placeholder image">
                                 <div class="live-status bg-default"></div>
                             </a>
@@ -251,7 +251,7 @@
         <div class="main-friend-chat">
             <div class="media chat-messages">
                 <a class="media-left photo-table" href="#!">
-                    <img class="media-object img-radius img-radius m-t-5" src="files/assets/images/avatar-2.jpg"
+                    <img class="media-object img-radius img-radius m-t-5" src="{{asset('files/assets/images/avatar-2.jpg')}}"
                          alt="Generic placeholder image">
                 </a>
                 <div class="media-body chat-menu-content">
@@ -271,7 +271,7 @@
             </div>
             <div class="media chat-messages">
                 <a class="media-left photo-table" href="#!">
-                    <img class="media-object img-radius img-radius m-t-5" src="files/assets/images/avatar-2.jpg"
+                    <img class="media-object img-radius img-radius m-t-5" src="{{asset('files/assets/images/avatar-2.jpg')}}"
                          alt="Generic placeholder image">
                 </a>
                 <div class="media-body chat-menu-content">
@@ -340,30 +340,30 @@
 
 <!-- Warning Section Ends -->
 <!-- Required Jquery -->
-<script type="text/javascript" src="files/bower_components/jquery/js/jquery.min.js"></script>
-<script type="text/javascript" src="files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="files/bower_components/popper.js/js/popper.min.js"></script>
-<script type="text/javascript" src="files/bower_components/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{asset('files/bower_components/jquery/js/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('files/bower_components/jquery-ui/js/jquery-ui.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('files/bower_components/popper.js/js/popper.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('files/bower_components/bootstrap/js/bootstrap.min.js')}}"></script>
 <!-- waves js -->
-<script src="files/assets/pages/waves/js/waves.min.js"></script>
+<script src="{{asset('files/assets/pages/waves/js/waves.min.js')}}"></script>
 <!-- jquery slimscroll js -->
-<script type="text/javascript" src="files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="{{asset('files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js')}}"></script>
 <!-- Float Chart js -->
-<script src="files/assets/pages/chart/float/jquery.flot.js"></script>
-<script src="files/assets/pages/chart/float/jquery.flot.categories.js"></script>
-<script src="files/assets/pages/chart/float/curvedLines.js"></script>
-<script src="files/assets/pages/chart/float/jquery.flot.tooltip.min.js"></script>
+<script src="{{asset('files/assets/pages/chart/float/jquery.flot.js')}}"></script>
+<script src="{{asset('files/assets/pages/chart/float/jquery.flot.categories.js')}}"></script>
+<script src="{{asset('files/assets/pages/chart/float/curvedLines.js')}}"></script>
+<script src="{{asset('files/assets/pages/chart/float/jquery.flot.tooltip.min.js')}}"></script>
 <!-- Chartlist charts -->
-<script src="files/bower_components/chartist/js/chartist.js"></script>
+<script src="{{asset('files/bower_components/chartist/js/chartist.js')}}"></script>
 <!-- amchart js -->
-<script src="files/assets/pages/widget/amchart/amcharts.js"></script>
-<script src="files/assets/pages/widget/amchart/serial.js"></script>
-<script src="files/assets/pages/widget/amchart/light.js"></script>
+<script src="{{asset('files/assets/pages/widget/amchart/amcharts.js')}}"></script>
+<script src="{{asset('files/assets/pages/widget/amchart/serial.js')}}"></script>
+<script src="{{asset('files/assets/pages/widget/amchart/light.js')}}"></script>
 <!-- Custom js -->
-<script src="files/assets/js/pcoded.min.js"></script>
-<script src="files/assets/js/vertical/vertical-layout.min.js"></script>
-<script type="text/javascript" src="files/assets/pages/dashboard/custom-dashboard.min.js"></script>
-<script type="text/javascript" src="files/assets/js/script.min.js"></script>
+<script src="{{asset('files/assets/js/pcoded.min.js')}}"></script>
+<script src="{{asset('files/assets/js/vertical/vertical-layout.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('files/assets/pages/dashboard/custom-dashboard.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('files/assets/js/script.min.js')}}"></script>
 </body>
 
 

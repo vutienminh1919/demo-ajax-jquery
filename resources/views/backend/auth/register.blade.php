@@ -123,11 +123,17 @@
                                 <input type="text" name="name" class="form-control">
                                 <span class="form-bar"></span>
                                 <label class="float-label">Your Name</label>
+                                @error('name')
+                                <p class="text text-danger" >{{$message}}</p>
+                                @enderror
                             </div>
                             <div class="form-group form-primary">
                                 <input type="text" name="email" class="form-control">
                                 <span class="form-bar"></span>
                                 <label class="float-label">Your Email Address</label>
+                                @error('email')
+                                <p class="text text-danger" >{{$message}}</p>
+                                @enderror
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
@@ -135,11 +141,14 @@
                                         <input type="password" name="password" class="form-control">
                                         <span class="form-bar"></span>
                                         <label class="float-label">Password</label>
+                                        @error('password')
+                                        <p class="text text-danger" >{{$message}}</p>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group form-primary">
-                                        <input type="password" name="confirm-password" class="form-control" required="">
+                                        <input type="password" name="confirm-password" class="form-control" >
                                         <span class="form-bar"></span>
                                         <label class="float-label">Confirm Password</label>
                                     </div>

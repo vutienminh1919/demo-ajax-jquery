@@ -128,14 +128,20 @@
                             </div>
                             <p class="text-muted text-center p-b-5">Sign in with your regular account</p>
                             <div class="form-group form-primary">
-                                <input type="text" name="email" class="form-control" required="">
+                                <input type="text" name="email" class="form-control" >
                                 <span class="form-bar"></span>
                                 <label class="float-label">Email</label>
+                                @error('email')
+                                <p class="text text-danger" >{{$message}}</p>
+                                @enderror
                             </div>
                             <div class="form-group form-primary">
-                                <input type="password" name="password" class="form-control" required="">
+                                <input type="password" name="password" class="form-control">
                                 <span class="form-bar"></span>
                                 <label class="float-label">Password</label>
+                                @error('password')
+                                <p class="text text-danger" >{{$message}}</p>
+                                @enderror
                             </div>
                             <div class="row m-t-25 text-left">
                                 <div class="col-12">

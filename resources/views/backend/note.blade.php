@@ -46,7 +46,7 @@
                                 <td>{{ $todo->user->name ?? ""}}</td>
 
                                 <td>
-                                    <a data-id="{{ $todo->id }}" onclick="editTodo(event.target)" class="btn btn-info">Edit</a>
+                                    <a data-id="{{ $tod   o->id }}" onclick="editTodo(event.target)" class="btn btn-info">Edit</a>
                                     <a class="btn btn-danger" onclick="deleteTodo({{ $todo->id }})">Delete</a>
                                 </td>
                             </tr>

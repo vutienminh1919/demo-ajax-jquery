@@ -24,6 +24,10 @@
             <a href="javascript:void(0)" class="btn btn-success mb-3" id="create-new-post" onclick="addPost()">Add
                 Post</a>
         </div>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" id="search" name="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="search-btn" type="submit">Search</button>
+        </form>
     </div>
     <div class="row" style="clear: both;margin-top: 18px;">
         <div class="col-12">
@@ -33,18 +37,19 @@
                     <th>ID</th>
                     <th>Title</th>
                     <th>Description</th>
+                    <th>Category</th>
                     <th>User</th>
                     <th style="text-align: center" colspan="3">Action</th>
 
                 </tr>
                 </thead>
-                <tbody>
+                <tbody class="list-post">
                 @foreach($posts as $post)
                     <tr id="row_{{$post->id}}">
                         <td>{{ $post->id  }}</td>
                         <td>{{ $post->title }}</td>
-
                         <td>{{ \Illuminate\Support\Str::limit($post->description,20) }}</td>
+                        <td>{{$post->category}}</td>
                         <td>{{ $post->user->name ?? " " }}</td>
                         <td><a href="javascript:void(0)" data-id="{{ $post->id }}" onclick="detailPost(event.target)"
                                class="btn btn-info">Detail</a></td>
@@ -86,6 +91,17 @@
                                   placeholder="Enter description" rows="4" cols="50">
                         </textarea>
                             <span id="descriptionError" class="alert-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2">Tag</label>
+                        <div class="col-sm-12">
+                            <select name="category" id="category" class="form-control" required="required">
+                                <option value="work">Job</option>
+                                <option value="school">School</option>
+                                <option value="play">Play</option>
+                            </select>
                         </div>
                     </div>
                 </form>

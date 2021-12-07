@@ -45,8 +45,10 @@ Route::prefix('/books')->group(function () {
     Route::put('/{todo}', [BookController::class, 'update']);
     Route::delete('/{todo}', [BookController::class, 'destroy']);
 });
-
-Route::resource('posts', PostController::class)->name('get','posts.index');
+Route::middleware('auth')->group(function () {
+    Route::resource('posts', PostController::class)->name('get', 'posts.index');
+    Route::get('/search', [PostController::class, 'search']);
+});
 
 
 

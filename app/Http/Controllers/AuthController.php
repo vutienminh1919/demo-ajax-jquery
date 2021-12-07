@@ -26,10 +26,10 @@ class AuthController extends Controller
 
 
         if (Auth::attempt($data)) {
-//            toastr()->success('Login Success !');
+            toastr()->success('Login Success !');
             return redirect()->route('posts.index');
         } else {
-            dd('chuc ban may man lan sau ');
+            return view('backend.auth.fail');
         }
     }
 
@@ -58,7 +58,7 @@ class AuthController extends Controller
         $data = $request->only('name', 'email', 'password', 'avatar');
         $data['password'] = Hash::make($request->password);
         $user = User::query()->create($data);
-//        toastr()->success('Register Success !');
+        toastr()->success('Register Success !');
         return redirect()->route('admin.login');
     }
 

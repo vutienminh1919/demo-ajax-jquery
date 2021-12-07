@@ -22,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/todos/create', [TodoController::class, 'store'])->name('todo.create');
 Route::get('/todos', [TodoController::class, 'index'])->name('todo.index');
 Route::post('/todos',[PostController::class,'store']);
+Route::get('/search',[PostController::class,'search']);
+//Route::resource('posts',PostController::class);
+Route::get('/posts',[PostController::class,'index']);
