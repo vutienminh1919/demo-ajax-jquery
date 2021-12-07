@@ -78,14 +78,14 @@
                 <div class="form-group">
                     <label for="name" class="col-sm-2">Task</label>
                     <div class="col-sm-12">
-                        <input type="text" class="form-control" id="task" name="todo" placeholder="Enter task">
+                        <input type="text" class="form-control" id="task" name="todo" placeholder="Enter task" required="">
                         <span id="taskError" class="alert-message"></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2">Tag</label>
                     <div class="col-sm-12">
-                        <input type="text" class="form-control" id="description" name="description" placeholder="Enter description">
+                        <input type="text" class="form-control" id="description" name="description" placeholder="Enter description" required="">
                         <span id="taskError" class="alert-message"></span>
                     </div>
                 </div>

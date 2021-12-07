@@ -24,7 +24,8 @@ class SocialController extends Controller
         $user = $this->findOrCreateUser($getInfo, $provider);
 
         auth()->login($user);
-        toastr()->success("Login by $provider Success !");
+//        toastr()->success("Login by $provider Success !");
+        toastr()->success('Login Success');
         return redirect()->route('posts.index');
 
     }
